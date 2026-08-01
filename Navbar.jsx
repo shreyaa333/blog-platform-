@@ -57,7 +57,7 @@ export default function Navbar() {
                   <div className="absolute right-0 mt-3 w-40 bg-paper border border-line rounded-lg shadow-lg p-2">
 
                     <Link
-                      to={`/@${user.username}`}
+                      to={`/profile/${user.username}`}
                       onClick={() => setMenuOpen(false)}
                       className="block px-3 py-2 text-sm hover:bg-paper-2 rounded"
                     >
