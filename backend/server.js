@@ -14,7 +14,7 @@ import notificationRoutes from "./routes/notifications.js";
 
 dotenv.config();
 connectDB();
-
+console.log("RUNNING THIS SERVER FILE");
 const app = express();
 
 app.use(
@@ -34,7 +34,12 @@ app.use("/api/posts", postRoutes);
 app.use("/api/comments", commentRoutes);
 app.use("/api/users", userRoutes);
 app.use("/api/notifications", notificationRoutes);
-
+app.get("/", (req, res) => {
+  res.json({
+    message: "Welcome to Inkwell API 🚀",
+    status: "Backend running successfully"
+  });
+});
 app.use(notFound);
 app.use(errorHandler);
 
