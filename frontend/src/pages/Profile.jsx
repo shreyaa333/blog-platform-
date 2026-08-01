@@ -9,6 +9,7 @@ export default function Profile() {
   const { username } = useParams();
   const cleanUsername = username?.replace(/^@/, "");
   const { user: me, updateUser } = useAuth();
+  console.log("PROFILE PARAM:", username);
   const [profile, setProfile] = useState(null);
   const [posts, setPosts] = useState([]);
   const [loading, setLoading] = useState(true);
