@@ -91,7 +91,7 @@ export default function PostDetail() {
         )}
 
         <div className="flex items-center gap-3 mt-8 pb-8 border-b border-line flex-wrap">
-          <Link to={`/@${post.author.username}`}>
+          <Link to={`/user/${post.author.username}`}>
             <img
               src={post.author.avatar || `https://ui-avatars.com/api/?name=${post.author.name}&background=2B2033&color=fff`}
               alt={post.author.name}
@@ -99,7 +99,7 @@ export default function PostDetail() {
             />
           </Link>
           <div className="text-sm">
-            <Link to={`/@${post.author.username}`} className="font-medium hover:text-signal transition-colors">
+            <Link to={`/user/${post.author.username}`} className="font-medium hover:text-signal transition-colors">
               {post.author.name}
             </Link>
             <div className="text-stone font-mono text-xs mt-0.5">
