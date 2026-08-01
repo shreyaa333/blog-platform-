@@ -25,7 +25,7 @@ export default function App() {
           <Route path="/edit/:id" element={<ProtectedRoute><Editor /></ProtectedRoute>} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
-          <Route path="/profile" element={<Profile />} />
+          <Route path="/user/:username" element={<Profile />} />
           <Route path="/@:username" element={<Profile />} />
           <Route path="/search" element={<Search />} />
           <Route path="/saved" element={<ProtectedRoute><Saved /></ProtectedRoute>} />
